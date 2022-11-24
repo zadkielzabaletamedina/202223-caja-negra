@@ -25,5 +25,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/aleja/OneDrive/Escritorio/GIT/202223-caja-negra/binarytree.jar"/>
+	<classpathentry kind="lib" path="binarytree.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
