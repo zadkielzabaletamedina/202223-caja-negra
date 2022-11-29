@@ -20,16 +20,16 @@ public class DepthTest {
 		arbolSoloRaiz = new BinaryTree<String>("1");
 		
 		arbolSoloUnHijo = new BinaryTree<String>("1");
-		arbolSoloUnHijo.insert("2",  arbolSoloUnHijo.getRoot(), false);
+		arbolSoloUnHijo.getRoot().setLeftChild(new Node("2"));
 		
 		arbolDosHijos = new BinaryTree<String>("1");
-		arbolDosHijos.insert("2", arbolDosHijos.getRoot(), false);
-		arbolDosHijos.insert("3", arbolDosHijos.getRoot(), true);
+		arbolDosHijos.getRoot().setLeftChild(new Node("2"));
+		arbolDosHijos.getRoot().setRightChild(new Node("3"));
 		
 		arbolVariosNiveles = new BinaryTree<String>("1");
-		arbolVariosNiveles.insert("2", arbolVariosNiveles.getRoot(), false);
-		arbolVariosNiveles.insert("3", arbolVariosNiveles.getRoot(), true);
-		arbolVariosNiveles.insert("4", arbolVariosNiveles.getRoot().getLeftChild(), false);
+		arbolVariosNiveles.getRoot().setLeftChild(new Node("2"));
+		arbolVariosNiveles.getRoot().setRightChild(new Node("3"));
+		arbolVariosNiveles.getRoot().getLeftChild().setLeftChild(new Node("4"));
 	
 	}
 	
