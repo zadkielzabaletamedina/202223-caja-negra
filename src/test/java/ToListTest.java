@@ -48,15 +48,12 @@ public class ToListTest {
 		arbolVariosNiveles = new BinaryTree<String>("1");
 		arbolVariosNiveles.insert("2", arbolVariosNiveles.getRoot(), true);
 		arbolVariosNiveles.insert("3", arbolVariosNiveles.getRoot(), false);
-		arbolVariosNiveles.insert("4", arbolVariosNiveles.getRoot().getLeftChild(), false);
+		arbolVariosNiveles.insert("4", arbolVariosNiveles.getRoot().getLeftChild(), true);
 		variosNiveles= new ArrayList<String>() ;
 		variosNiveles.add("1");
 		variosNiveles.add("2");
 		variosNiveles.add("3");
-		variosNiveles.add("4");
-
-
-	
+		variosNiveles.add("4");	
 	}
 	
 	@Test
