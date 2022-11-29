@@ -19,7 +19,7 @@ public class DepthNodoTest {
 	Node nodoArbolDos;
 	Node nodoVarios;
 	Node noEnArbol;
-	//Node nodoNull;
+	Node nodoNull;
 	
 	
 	@BeforeEach
@@ -28,22 +28,23 @@ public class DepthNodoTest {
 		nodoRaiz= arbolSoloRaiz.getRoot();
 		
 		arbolSoloUnHijo = new BinaryTree<String>("1");
-		arbolSoloUnHijo.insert("2",  arbolSoloUnHijo.getRoot(), false);
+		arbolSoloUnHijo.getRoot().setLeftChild(new Node("2"));
 		nodoUnHijo= arbolSoloUnHijo.getRoot();
 		
 		arbolDosHijos = new BinaryTree<String>("1");
-		arbolDosHijos.insert("2", arbolDosHijos.getRoot(), false);
-		arbolDosHijos.insert("3", arbolDosHijos.getRoot(), true);
+		arbolDosHijos.getRoot().setLeftChild(new Node("2"));
+		arbolDosHijos.getRoot().setRightChild(new Node("3"));
 		nodoArbolDos= arbolDosHijos.getRoot();
 		
 		arbolVariosNiveles = new BinaryTree<String>("1");
-		arbolVariosNiveles.insert("2", arbolVariosNiveles.getRoot(), false);
-		arbolVariosNiveles.insert("3", arbolVariosNiveles.getRoot(), true);
-		arbolVariosNiveles.insert("4", arbolVariosNiveles.getRoot().getLeftChild(), false);
+		arbolVariosNiveles.getRoot().setLeftChild(new Node("2"));
+		arbolVariosNiveles.getRoot().setRightChild(new Node("3"));
+		arbolVariosNiveles.getRoot().getLeftChild().setLeftChild(new Node("4"));
+		
 		nodoVarios= arbolVariosNiveles.getRoot();
 		
 		noEnArbol=new Node<String>("6");
-		//nodoNull=new Node<String>(null);
+		nodoNull=null;
 
 	
 	}
@@ -83,7 +84,7 @@ public class DepthNodoTest {
 	void nodoNoEnArbolYVariosNiveles(){
 		assertThrows(Exception.class, ()-> arbolVariosNiveles.depth(noEnArbol));
 	}
-	/*@Test
+	@Test
 	void nodoNullYSoloUnNodo(){
 		assertThrows(Exception.class, ()-> arbolSoloRaiz.depth(nodoNull));
 	}
@@ -99,7 +100,6 @@ public class DepthNodoTest {
 	void nodoNullYVariosNiveles(){
 		assertThrows(Exception.class, ()-> arbolVariosNiveles.depth(nodoNull));
 	}
-	*/
 
 
 

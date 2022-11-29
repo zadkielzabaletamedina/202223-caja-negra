@@ -31,14 +31,14 @@ public class ToListTest {
 		raiz.add("1");
 		
 		arbolSoloUnHijo = new BinaryTree<String>("1");
-		arbolSoloUnHijo.insert("2",  arbolSoloUnHijo.getRoot(), true);
+		arbolSoloUnHijo.getRoot().setLeftChild(new Node("2"));
 		soloUnHijo= new ArrayList<String>() ;
 		soloUnHijo.add("1");
 		soloUnHijo.add("2");
 		
 		arbolDosHijos = new BinaryTree<String>("1");
-		arbolDosHijos.insert("2", arbolDosHijos.getRoot(), true);
-		arbolDosHijos.insert("3", arbolDosHijos.getRoot(), false);
+		arbolDosHijos.getRoot().setLeftChild(new Node("2"));
+		arbolDosHijos.getRoot().setRightChild(new Node("3"));
 		dosHijos= new ArrayList<String>() ;
 		dosHijos.add("1");
 		dosHijos.add("2");
@@ -46,9 +46,9 @@ public class ToListTest {
 
 		
 		arbolVariosNiveles = new BinaryTree<String>("1");
-		arbolVariosNiveles.insert("2", arbolVariosNiveles.getRoot(), true);
-		arbolVariosNiveles.insert("3", arbolVariosNiveles.getRoot(), false);
-		arbolVariosNiveles.insert("4", arbolVariosNiveles.getRoot().getLeftChild(), false);
+		arbolVariosNiveles.getRoot().setLeftChild(new Node("2"));
+		arbolVariosNiveles.getRoot().setRightChild(new Node("3"));
+		arbolVariosNiveles.getRoot().getLeftChild().setLeftChild(new Node("4"));
 		variosNiveles= new ArrayList<String>() ;
 		variosNiveles.add("1");
 		variosNiveles.add("2");

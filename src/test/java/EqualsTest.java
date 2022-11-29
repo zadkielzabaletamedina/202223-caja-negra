@@ -24,14 +24,15 @@ public class EqualsTest {
 		arbolSoloRaiz1 = new BinaryTree<String>("1");
 
 		arbolVariosNiveles = new BinaryTree<String>("1");
-		arbolVariosNiveles.insert("2", arbolVariosNiveles.getRoot(), false);
-		arbolVariosNiveles.insert("3",  arbolVariosNiveles.getRoot(), true);
-		arbolVariosNiveles.insert("4",  arbolVariosNiveles.getRoot().getLeftChild(), false);
+		arbolVariosNiveles.getRoot().setLeftChild(new Node("2"));
+		arbolVariosNiveles.getRoot().setRightChild(new Node("3"));
+		arbolVariosNiveles.getRoot().getLeftChild().setLeftChild(new Node("4"));
+		
 		
 		arbolVariosNiveles1 = new BinaryTree<String>("1");
-		arbolVariosNiveles1.insert("2", arbolVariosNiveles1.getRoot(), false);
-		arbolVariosNiveles1.insert("3",  arbolVariosNiveles1.getRoot(), true);
-		arbolVariosNiveles1.insert("4",  arbolVariosNiveles1.getRoot().getLeftChild(), false);
+		arbolVariosNiveles1.getRoot().setLeftChild(new Node("2"));
+		arbolVariosNiveles1.getRoot().setRightChild(new Node("3"));
+		arbolVariosNiveles1.getRoot().getLeftChild().setLeftChild(new Node("4"));
 		
 		arbolNulo= null;
 		
