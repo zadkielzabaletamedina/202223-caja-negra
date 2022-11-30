@@ -47,6 +47,7 @@ public class InsertTest {
 				
 		arbolVariosNivelesHijoIzq= Util.crearArbolVariosNivelesIzq();
 		
+		
 		arbolVariosNivelesHijoDcha= Util.crearArbolVariosNivelesDcha();
 		nodoArbolVariosNivelesConHijoIzq= arbolVariosNivelesHijoIzq.getRoot().getLeftChild().getLeftChild();
 
@@ -109,12 +110,13 @@ public class InsertTest {
 		arbolSoloRaiz.insert("2", raizArbolSoloRaiz, true);
 		assertTrue(Util.arbolesIguales(arbolSoloRaiz, arbolSoloRaizHijoIzq));
 	}
-	@Test
+	
 	//contenido válido, nodo en el árbol, no tiene hijo, atleft = true, arbol con varios niveles
+	//contenido válido, nodo en el árbol, no tiene hijo, atleft = false, arbol con varios niveles
 	void arbolVariosNivelesValidoEnElArbolIzq() {
 		arbolVariosNiveles.insert("5",nodoArbolVariosNiveles, true );
 		assertTrue(Util.arbolesIguales(arbolVariosNiveles,arbolVariosNivelesHijoIzq));
-	}
+	} 
 	@Test
 	//contenido válido, nodo en el árbol, no tiene hijo, atleft = false, arbol solo raiz
 		void arbolSoloRaizValidoEnElArbolDcha() {

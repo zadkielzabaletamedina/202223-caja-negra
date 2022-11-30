@@ -91,7 +91,7 @@ public class Util {
     	
     	aux3= new Node("5");
     	aux3.setParent(aux2);
-    	arbolVariosNiveles.getRoot().getLeftChild().setLeftChild(aux3);
+    	arbolVariosNiveles.getRoot().getLeftChild().getLeftChild().setLeftChild(aux3);
     	
     	return arbolVariosNiveles;
       }
@@ -114,7 +114,7 @@ public class Util {
     	
     	aux3= new Node("5");
     	aux3.setParent(aux2);
-    	arbolVariosNiveles.getRoot().getLeftChild().setRightChild(aux3);
+    	arbolVariosNiveles.getRoot().getLeftChild().getLeftChild().setRightChild(aux3);
     	
     	return arbolVariosNiveles;
       }
