@@ -7,11 +7,11 @@ import com.binarytree.BinaryTree;
 import com.binarytree.Node;
 
 class RemoveTest {
-	BinaryTree arbolSoloRaiz;
-	BinaryTree arbolVariosNiveles;
-	BinaryTree arbolVariosNiveles1;
-	Node nodoNoEnElArbol;
-	Node nodoNull;
+	private BinaryTree arbolSoloRaiz;
+	private BinaryTree arbolVariosNiveles;
+	private BinaryTree arbolVariosNiveles1;
+	private Node nodoNoEnElArbol;
+	private Node nodoNull;
 	
 	@BeforeEach
 	void setUp() {
