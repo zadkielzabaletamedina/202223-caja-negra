@@ -11,11 +11,11 @@ import com.binarytree.Node;
 public class EqualsTest {
 	
 	
-	BinaryTree arbolSoloRaiz;
-	BinaryTree arbolSoloRaiz1;
-	BinaryTree arbolVariosNiveles;
-	BinaryTree arbolVariosNiveles1;
-	BinaryTree arbolNulo;
+	private BinaryTree arbolSoloRaiz;
+	private BinaryTree arbolSoloRaiz1;
+	private BinaryTree arbolVariosNiveles;
+	private BinaryTree arbolVariosNiveles1;
+	private BinaryTree arbolNulo;
 
 	
 	@BeforeEach

@@ -10,16 +10,16 @@ import com.binarytree.Node;
 
 public class DepthNodoTest {
 	
-	BinaryTree arbolSoloRaiz;
-	BinaryTree arbolSoloUnHijo;
-	BinaryTree arbolDosHijos;
-	BinaryTree arbolVariosNiveles;
-	Node raizArbolSoloRaiz;
-	Node raizArbolUnHijo;
-	Node raizArbolDosHijos;
-	Node raizVariosNiveles;
-	Node nodoNoEnArbol;
-	Node nodoNull;
+	private BinaryTree arbolSoloRaiz;
+	private BinaryTree arbolSoloUnHijo;
+	private BinaryTree arbolDosHijos;
+	private BinaryTree arbolVariosNiveles;
+	private Node raizArbolSoloRaiz;
+	private Node raizArbolUnHijo;
+	private Node raizArbolDosHijos;
+	private Node raizVariosNiveles;
+	private Node nodoNoEnArbol;
+	private Node nodoNull;
 	
 	
 	@BeforeEach

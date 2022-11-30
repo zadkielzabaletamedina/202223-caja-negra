@@ -12,21 +12,21 @@ import com.binarytree.Node;
 
 public class ToListTest {
 	
-	BinaryTree arbolSoloRaiz;
-	BinaryTree arbolSoloUnHijo;
-	BinaryTree arbolDosHijos;
-	BinaryTree arbolVariosNiveles;
-	List<String> listaArbolSoloRaiz;
-	List<String> listaArbolSoloUnHijo;
-	List<String> listaArbolDosHijos;
-	List<String> listaArbolVariosNiveles;
+	private BinaryTree arbolSoloRaiz;
+	private BinaryTree arbolSoloUnHijo;
+	private BinaryTree arbolDosHijos;
+	private BinaryTree arbolVariosNiveles;
+	private List<String> listaArbolSoloRaiz;
+	private List<String> listaArbolSoloUnHijo;
+	private List<String> listaArbolDosHijos;
+	private List<String> listaArbolVariosNiveles;
 
 
 	
 	
 	@BeforeEach
 	void setUp() {
-	    	arbolSoloRaiz = Util.crearArbolSoloRaiz();
+	    arbolSoloRaiz = Util.crearArbolSoloRaiz();
 		
 		listaArbolSoloRaiz= new ArrayList<String>() ;
 		listaArbolSoloRaiz.add("1");

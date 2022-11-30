@@ -72,4 +72,51 @@ public class Util {
 	arbolVariosNiveles.getRoot().setRightChild(aux);
 	return arbolVariosNiveles;
     }
+    
+    public static BinaryTree crearArbolVariosNivelesIzq() {
+    	BinaryTree arbolVariosNiveles;
+    	Node aux;
+    	Node aux2;
+    	Node aux3;
+    	arbolVariosNiveles = new BinaryTree<String>("1");
+    	aux = new Node("2");
+    	aux.setParent(arbolVariosNiveles.getRoot());
+    	arbolVariosNiveles.getRoot().setLeftChild(aux);
+    	aux2 = new Node("4");
+    	aux2.setParent(aux);
+    	aux.setLeftChild(aux2);
+    	aux = new Node("3");
+    	aux.setParent(arbolVariosNiveles.getRoot());
+    	arbolVariosNiveles.getRoot().setRightChild(aux);
+    	
+    	aux3= new Node("5");
+    	aux3.setParent(aux2);
+    	arbolVariosNiveles.getRoot().getLeftChild().setLeftChild(aux3);
+    	
+    	return arbolVariosNiveles;
+      }
+        
+    public static BinaryTree crearArbolVariosNivelesDcha() {
+    	BinaryTree arbolVariosNiveles;
+    	Node aux;
+    	Node aux2;
+    	Node aux3;
+    	arbolVariosNiveles = new BinaryTree<String>("1");
+    	aux = new Node("2");
+    	aux.setParent(arbolVariosNiveles.getRoot());
+    	arbolVariosNiveles.getRoot().setLeftChild(aux);
+    	aux2 = new Node("4");
+    	aux2.setParent(aux);
+    	aux.setLeftChild(aux2);
+    	aux = new Node("3");
+    	aux.setParent(arbolVariosNiveles.getRoot());
+    	arbolVariosNiveles.getRoot().setRightChild(aux);
+    	
+    	aux3= new Node("5");
+    	aux3.setParent(aux2);
+    	arbolVariosNiveles.getRoot().getLeftChild().setRightChild(aux3);
+    	
+    	return arbolVariosNiveles;
+      }
+    
 }

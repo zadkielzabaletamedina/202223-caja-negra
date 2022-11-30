@@ -9,10 +9,10 @@ import com.binarytree.Node;
 
 
 class sizeTest {
-	BinaryTree arbolSoloRaiz;
-	BinaryTree arbolSoloUnHijo;
-	BinaryTree arbolDosHijos;
-	BinaryTree arbolVariosNiveles;
+	private BinaryTree arbolSoloRaiz;
+	private BinaryTree arbolSoloUnHijo;
+	private BinaryTree arbolDosHijos;
+	private BinaryTree arbolVariosNiveles;
 	
 	@BeforeEach
 	void setUp() {

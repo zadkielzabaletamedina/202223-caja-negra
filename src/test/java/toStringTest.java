@@ -14,14 +14,14 @@ import com.binarytree.BinaryTree;
 
 public class toStringTest {
 
-	BinaryTree arbolSoloRaiz;
-	BinaryTree arbolSoloUnHijo;
-	BinaryTree arbolDosHijos;
-	BinaryTree arbolVariosNiveles;
-	String stringArbolSoloRaiz;
-	String stringArbolSoloUnHijo;
-	String stringArbolDosHijos;
-	String stringArbolVariosNiveles;
+	private BinaryTree arbolSoloRaiz;
+	private BinaryTree arbolSoloUnHijo;
+	private BinaryTree arbolDosHijos;
+	private BinaryTree arbolVariosNiveles;
+	private String stringArbolSoloRaiz;
+	private String stringArbolSoloUnHijo;
+	private String stringArbolDosHijos;
+	private String stringArbolVariosNiveles;
 	
 	@BeforeEach
 	void setUp() {

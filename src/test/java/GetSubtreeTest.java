@@ -9,19 +9,19 @@ import com.binarytree.BinaryTree;
 import com.binarytree.Node;
 
 public class GetSubtreeTest {
-	BinaryTree arbolSoloRaiz;
-	BinaryTree arbolVariosNiveles;
-	BinaryTree subArbolRaiz;
-	BinaryTree subArbolVariosNiveles;
-	Node raizArbolSoloRaiz;
-	Node nodoArbolVariosNiveles;
-	Node nodoNoEnElArbol;
-	Node nodoNull;
+	private BinaryTree arbolSoloRaiz;
+	private BinaryTree arbolVariosNiveles;
+	private BinaryTree subArbolRaiz;
+	private BinaryTree subArbolVariosNiveles;
+	private Node raizArbolSoloRaiz;
+	private Node nodoArbolVariosNiveles;
+	private Node nodoNoEnElArbol;
+	private Node nodoNull;
 	
 	@BeforeEach
 	void setUp() {
 	    	
-	    	arbolSoloRaiz = Util.crearArbolSoloRaiz();
+	    arbolSoloRaiz = Util.crearArbolSoloRaiz();
 		raizArbolSoloRaiz = arbolSoloRaiz.getRoot();
 
 		arbolVariosNiveles = Util.crearArbolVariosNiveles();
