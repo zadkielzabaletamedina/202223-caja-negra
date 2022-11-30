@@ -16,13 +16,10 @@ class SearchTest {
 	
 	@BeforeEach
 	void setUp() {
+	    	arbolUnNodo = Util.crearArbolSoloRaiz();
+	    	arbolVariosNiveles = Util.crearArbolVariosNiveles();
 		contenidoValido = "1";
 		contenidoNoValido = "abc_";
-		arbolUnNodo = new BinaryTree<>("1");
-		arbolVariosNiveles = new BinaryTree<>("1");
-		Node raiz = arbolVariosNiveles.getRoot();
-		raiz.setLeftChild(new Node<>("2"));
-		raiz.setRightChild(new Node<>("3"));
 	}
 	
 	@Test

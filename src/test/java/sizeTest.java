@@ -16,24 +16,10 @@ class sizeTest {
 	
 	@BeforeEach
 	void setUp() {
-		arbolSoloRaiz = new BinaryTree<String>("1");
-		arbolSoloUnHijo = new BinaryTree<String>("1");
-		arbolDosHijos = new BinaryTree<String>("1");
-		arbolVariosNiveles = new BinaryTree<String>("1");
-		
-	
-		arbolSoloUnHijo.insert("2", arbolSoloUnHijo.getRoot(), false);
-		
-		
-		arbolDosHijos.insert("2", arbolDosHijos.getRoot(), false);
-		arbolDosHijos.insert("3", arbolDosHijos.getRoot(), true);
-
-
-		arbolVariosNiveles.insert("2", arbolVariosNiveles.getRoot(), false);
-		arbolVariosNiveles.insert("3", arbolVariosNiveles.getRoot(), true);
-		arbolVariosNiveles.insert("4",arbolVariosNiveles.search("3"), false);
-		
-		
+	    	arbolSoloRaiz = Util.crearArbolSoloRaiz();
+		arbolSoloUnHijo = Util.crearArbolSoloHijoIzquierda();
+		arbolDosHijos = Util.crearArbolDosHijos();
+		arbolVariosNiveles = Util.crearArbolVariosNiveles();	
 	}
 	@Test
 	void soloNodoRaiz() {

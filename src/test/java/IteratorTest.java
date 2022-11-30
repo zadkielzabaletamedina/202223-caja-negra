@@ -18,16 +18,10 @@ class IteratorTest {
     
     @BeforeEach
     void setUp() {
-	arbolUnSoloNodo = new BinaryTree("1");
-	arbolUnSoloHijo = new BinaryTree("1");
-	arbolUnSoloHijo.getRoot().setLeftChild(new Node("2"));
-	arbolDosHijos = new BinaryTree("1");
-	arbolDosHijos.getRoot().setLeftChild(new Node("2"));
-	arbolDosHijos.getRoot().setRightChild(new Node("3"));
-	arbolVariosNiveles = new BinaryTree("1");
-	arbolVariosNiveles.getRoot().setLeftChild(new Node("2"));
-	arbolVariosNiveles.getRoot().setRightChild(new Node("3"));
-	arbolVariosNiveles.getRoot().getLeftChild().setLeftChild(new Node("4"));
+	arbolUnSoloNodo = Util.crearArbolSoloRaiz();
+	arbolUnSoloHijo = Util.crearArbolSoloHijoIzquierda();
+	arbolDosHijos = Util.crearArbolDosHijos();
+	arbolVariosNiveles = Util.crearArbolVariosNiveles();
     }
 
     @Test

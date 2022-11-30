@@ -14,75 +14,66 @@ public class DepthNodoTest {
 	BinaryTree arbolSoloUnHijo;
 	BinaryTree arbolDosHijos;
 	BinaryTree arbolVariosNiveles;
-	Node nodoRaiz;
-	Node nodoUnHijo;
-	Node nodoArbolDos;
-	Node nodoVarios;
-	Node noEnArbol;
+	Node raizArbolSoloRaiz;
+	Node raizArbolUnHijo;
+	Node raizArbolDosHijos;
+	Node raizVariosNiveles;
+	Node nodoNoEnArbol;
 	Node nodoNull;
 	
 	
 	@BeforeEach
 	void setUp() {
-		arbolSoloRaiz = new BinaryTree<String>("1");
-		nodoRaiz= arbolSoloRaiz.getRoot();
+	    	arbolSoloRaiz = Util.crearArbolSoloRaiz();
+		raizArbolSoloRaiz = arbolSoloRaiz.getRoot();
 		
-		arbolSoloUnHijo = new BinaryTree<String>("1");
-		arbolSoloUnHijo.getRoot().setLeftChild(new Node("2"));
-		nodoUnHijo= arbolSoloUnHijo.getRoot();
+		arbolSoloUnHijo = Util.crearArbolSoloHijoIzquierda();
+		raizArbolUnHijo = arbolSoloUnHijo.getRoot();
 		
-		arbolDosHijos = new BinaryTree<String>("1");
-		arbolDosHijos.getRoot().setLeftChild(new Node("2"));
-		arbolDosHijos.getRoot().setRightChild(new Node("3"));
-		nodoArbolDos= arbolDosHijos.getRoot();
+		arbolDosHijos = Util.crearArbolDosHijos();
+		raizArbolDosHijos = arbolDosHijos.getRoot();
 		
-		arbolVariosNiveles = new BinaryTree<String>("1");
-		arbolVariosNiveles.getRoot().setLeftChild(new Node("2"));
-		arbolVariosNiveles.getRoot().setRightChild(new Node("3"));
-		arbolVariosNiveles.getRoot().getLeftChild().setLeftChild(new Node("4"));
+		arbolVariosNiveles = Util.crearArbolVariosNiveles();
+		raizVariosNiveles= arbolVariosNiveles.getRoot();
 		
-		nodoVarios= arbolVariosNiveles.getRoot();
-		
-		noEnArbol=new Node<String>("6");
+		nodoNoEnArbol=new Node<String>("6");
 		nodoNull=null;
-
-	
 	}
 	
 	@Test
 	void nodoEnArbolYUnSoloNodo() {
-		assertEquals(arbolSoloRaiz.depth(nodoRaiz), 1);
+		assertEquals(arbolSoloRaiz.depth(raizArbolSoloRaiz), 0);
 	}
 	
 	@Test
 	void nodoEnArbolYUnSoloHijo() {
-		assertEquals(arbolSoloUnHijo.depth(nodoUnHijo), 2);
+		assertEquals(arbolSoloUnHijo.depth(raizArbolUnHijo), 1);
 	}
 	
 	@Test
 	void nodoEnArbolYDosHijos() {
-		assertEquals(arbolDosHijos.depth(nodoArbolDos), 2);
+		assertEquals(arbolDosHijos.depth(raizArbolDosHijos), 1);
 	}
 	
 	@Test
 	void nodoEnArbolYVariosNiveles() {
-		assertEquals(arbolVariosNiveles.depth(nodoVarios), 3);
+		assertEquals(arbolVariosNiveles.depth(raizVariosNiveles), 2);
 	}
 	@Test
 	void nodoNoEnArbolYSoloUnNodo(){
-		assertThrows(Exception.class, ()-> arbolSoloRaiz.depth(noEnArbol));
+		assertThrows(Exception.class, ()-> arbolSoloRaiz.depth(nodoNoEnArbol));
 	}
 	@Test
 	void nodoNoEnArbolYUnSoloHijo(){
-		assertThrows(Exception.class, ()-> arbolSoloUnHijo.depth(noEnArbol));
+		assertThrows(Exception.class, ()-> arbolSoloUnHijo.depth(nodoNoEnArbol));
 	}
 	@Test
 	void nodoNoEnArbolYDosHijos(){
-		assertThrows(Exception.class, ()-> arbolDosHijos.depth(noEnArbol));
+		assertThrows(Exception.class, ()-> arbolDosHijos.depth(nodoNoEnArbol));
 	}
 	@Test
 	void nodoNoEnArbolYVariosNiveles(){
-		assertThrows(Exception.class, ()-> arbolVariosNiveles.depth(noEnArbol));
+		assertThrows(Exception.class, ()-> arbolVariosNiveles.depth(nodoNoEnArbol));
 	}
 	@Test
 	void nodoNullYSoloUnNodo(){

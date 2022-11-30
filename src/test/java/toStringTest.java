@@ -18,50 +18,43 @@ public class toStringTest {
 	BinaryTree arbolSoloUnHijo;
 	BinaryTree arbolDosHijos;
 	BinaryTree arbolVariosNiveles;
-	String raiz;
-	String soloUnHijo;
-	String dosHijos;
-	String variosNiveles;
+	String stringArbolSoloRaiz;
+	String stringArbolSoloUnHijo;
+	String stringArbolDosHijos;
+	String stringArbolVariosNiveles;
 	
 	@BeforeEach
 	void setUp() {
-		arbolSoloRaiz = new BinaryTree<String>("1");
-		raiz = "1";
+	    	
+	    	arbolSoloRaiz = Util.crearArbolSoloRaiz();
+		arbolSoloUnHijo = Util.crearArbolSoloHijoIzquierda();
+		arbolDosHijos = Util.crearArbolDosHijos();
+		arbolVariosNiveles = Util.crearArbolVariosNiveles();
 		
-		arbolSoloUnHijo = new BinaryTree<String>("1");
-		arbolSoloUnHijo.insert("2", arbolSoloUnHijo.getRoot(), true);
-		soloUnHijo = "1 2";
-		
-		arbolDosHijos = new BinaryTree<String>("1");
-		arbolDosHijos.insert("2", arbolDosHijos.getRoot(), true);
-		arbolDosHijos.insert("3", arbolDosHijos.getRoot(), false);
-		dosHijos = "1 2 3";
-		
-		arbolVariosNiveles = new BinaryTree<String>("1");
-		arbolVariosNiveles.insert("2", arbolVariosNiveles.getRoot(), true);
-		arbolVariosNiveles.insert("3", arbolVariosNiveles.getRoot(), false);
-		arbolVariosNiveles.insert("4", arbolVariosNiveles.getRoot().getLeftChild(), false);
-		variosNiveles = "1 2 3 4";
+		stringArbolSoloRaiz = "1";
+		stringArbolSoloUnHijo = "1 2";
+		stringArbolDosHijos = "1 2 3";
+		stringArbolVariosNiveles = "1 2 3 4";
 	}
 	
 	
 	@Test
 	void arbolSoloRaiz() {
-		arbolSoloRaiz.toString().equals(raiz);
+		arbolSoloRaiz.toString().equals(stringArbolSoloRaiz);
 	}
 	
 	@Test
 	void arbolConSoloUnHijo() {
-		arbolSoloUnHijo.toString().equals(soloUnHijo);
+		arbolSoloUnHijo.toString().equals(stringArbolSoloUnHijo);
 	}
 	
 	@Test
 	void arbolDosHijos() {
-		arbolDosHijos.toString().equals(dosHijos);
+		arbolDosHijos.toString().equals(stringArbolDosHijos);
 	}
 	
 	@Test
 	void arbolVariosNiveles() {
-		arbolVariosNiveles.toString().equals(variosNiveles);
+		arbolVariosNiveles.toString().equals(stringArbolVariosNiveles);
 	}
 }

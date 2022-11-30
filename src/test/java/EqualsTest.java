@@ -19,25 +19,14 @@ public class EqualsTest {
 
 	
 	@BeforeEach
-	void setUp() {
-		arbolSoloRaiz = new BinaryTree<String>("1");
-		arbolSoloRaiz1 = new BinaryTree<String>("1");
-
-		arbolVariosNiveles = new BinaryTree<String>("1");
-		arbolVariosNiveles.getRoot().setLeftChild(new Node("2"));
-		arbolVariosNiveles.getRoot().setRightChild(new Node("3"));
-		arbolVariosNiveles.getRoot().getLeftChild().setLeftChild(new Node("4"));
-		
-		
-		arbolVariosNiveles1 = new BinaryTree<String>("1");
-		arbolVariosNiveles1.getRoot().setLeftChild(new Node("2"));
-		arbolVariosNiveles1.getRoot().setRightChild(new Node("3"));
-		arbolVariosNiveles1.getRoot().getLeftChild().setLeftChild(new Node("4"));
+	void setUp() {    
+	    	arbolSoloRaiz = Util.crearArbolSoloRaiz();
+	    	arbolSoloRaiz1 = Util.crearArbolSoloRaiz();
+	    	
+		arbolVariosNiveles = Util.crearArbolVariosNiveles();
+		arbolVariosNiveles1 = Util.crearArbolVariosNiveles();
 		
 		arbolNulo= null;
-		
-		
-		
 	}
 	
 	@Test
@@ -46,7 +35,7 @@ public class EqualsTest {
 
 	}
 	@Test
-	void arbolesMasNiveleIguales(){
+	void arbolesVariosNivelesIguales(){
 		assertTrue(arbolVariosNiveles.equals(arbolVariosNiveles1));
 	
 	}
@@ -56,7 +45,7 @@ public class EqualsTest {
 	
 	}
 	@Test
-	void arbolesMasNiveleDistintos(){
+	void arbolesVariosNivelesDistintos(){
 		assertFalse(arbolVariosNiveles.equals(arbolSoloRaiz1));
 	
 	}

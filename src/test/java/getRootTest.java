@@ -17,19 +17,10 @@ class getRootTest {
 	
 	@BeforeEach
 	void setUp() {
-		arbolSoloRaiz = new BinaryTree<String>("1");
-		arbolSoloUnHijo = new BinaryTree<String>("1");
-		Node nodoRoot = arbolSoloUnHijo.getRoot();
-		arbolSoloUnHijo.insert("2", nodoRoot, false);
-		arbolDosHijos = new BinaryTree<String>("1");
-		nodoRoot = arbolDosHijos.getRoot();
-		arbolDosHijos.insert("2", nodoRoot, false);
-		arbolDosHijos.insert("3", nodoRoot, true);
-		arbolVariosNiveles = new BinaryTree<String>("1");
-		nodoRoot = arbolVariosNiveles.getRoot();
-		arbolVariosNiveles.insert("2", nodoRoot, false);
-		arbolVariosNiveles.insert("3", nodoRoot, true);
-		arbolVariosNiveles.insert("4", nodoRoot.getLeftChild(), false);
+	    	arbolSoloRaiz = Util.crearArbolSoloRaiz();
+	    	arbolSoloUnHijo = Util.crearArbolSoloHijoIzquierda();
+	    	arbolDosHijos = Util.crearArbolDosHijos();
+	    	arbolVariosNiveles = Util.crearArbolVariosNiveles();
 	}
 
 	@Test

@@ -13,25 +13,23 @@ public class GetSubtreeTest {
 	BinaryTree arbolVariosNiveles;
 	BinaryTree subArbolRaiz;
 	BinaryTree subArbolVariosNiveles;
-	Node nodoRaiz;
-	Node nodoVarios;
+	Node raizArbolSoloRaiz;
+	Node nodoArbolVariosNiveles;
 	Node nodoNoEnElArbol;
 	Node nodoNull;
 	
 	@BeforeEach
 	void setUp() {
-		arbolSoloRaiz = new BinaryTree<String>("1");
-		nodoRaiz= arbolSoloRaiz.getRoot();
-		subArbolRaiz= new BinaryTree<String>("1");
-		
-		arbolVariosNiveles = new BinaryTree<String>("1");
-		arbolVariosNiveles.getRoot().setLeftChild(new Node("2"));
-		arbolVariosNiveles.getRoot().setRightChild(new Node("3"));
-		arbolVariosNiveles.getRoot().getLeftChild().setLeftChild(new Node("4"));
-		
-		nodoVarios=arbolVariosNiveles.getRoot().getLeftChild();
+	    	
+	    	arbolSoloRaiz = Util.crearArbolSoloRaiz();
+		raizArbolSoloRaiz = arbolSoloRaiz.getRoot();
+
+		arbolVariosNiveles = Util.crearArbolVariosNiveles();
+		nodoArbolVariosNiveles = arbolVariosNiveles.getRoot().getLeftChild();
 		subArbolVariosNiveles= new BinaryTree<String>("2");
-		subArbolVariosNiveles.getRoot().setLeftChild(new Node("3"));
+		Node aux = new Node("4"); 
+		aux.setParent(subArbolVariosNiveles.getRoot());
+		subArbolVariosNiveles.getRoot().setLeftChild(aux);
 		
 		nodoNoEnElArbol= new Node("6");
 		nodoNull= null;
@@ -40,7 +38,7 @@ public class GetSubtreeTest {
 	
 	@Test
 	void arbolDeUnNodoNodoEnElArbol(){
-		assertTrue(arbolSoloRaiz.getSubTree(nodoRaiz).equals(subArbolRaiz));
+		assertTrue(Util.arbolesIguales(arbolSoloRaiz, arbolSoloRaiz.getSubTree(raizArbolSoloRaiz)));
 	}
 	
 	@Test
@@ -55,7 +53,7 @@ public class GetSubtreeTest {
 	
 	@Test
 	void arbolMasUnNivelNodoEnElArbol(){
-		assertTrue(arbolVariosNiveles.getSubTree(nodoVarios).equals(subArbolVariosNiveles));
+		assertTrue(Util.arbolesIguales(subArbolVariosNiveles, arbolVariosNiveles.getSubTree(nodoArbolVariosNiveles)));
 	}
 	
 	@Test
