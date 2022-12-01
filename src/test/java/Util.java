@@ -88,15 +88,13 @@ public class Util {
     	aux = new Node("3");
     	aux.setParent(arbolVariosNiveles.getRoot());
     	arbolVariosNiveles.getRoot().setRightChild(aux);
-    	
     	aux3= new Node("5");
     	aux3.setParent(aux2);
     	arbolVariosNiveles.getRoot().getLeftChild().getLeftChild().setLeftChild(aux3);
-    	
     	return arbolVariosNiveles;
       }
         
-    public static BinaryTree crearArbolVariosNivelesDcha() {
+    public static BinaryTree crearArbolCuatroNivelesDcha() {
     	BinaryTree arbolVariosNiveles;
     	Node aux;
     	Node aux2;

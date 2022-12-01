@@ -52,7 +52,7 @@ public class DepthNodoTest {
 	
 	@Test
 	void nodoEnArbolYDosHijos() {
-		assertEquals(arbolDosHijos.depth(raizArbolDosHijos), 1);
+		assertEquals( arbolDosHijos.depth(raizArbolDosHijos),1);
 	}
 	
 	@Test

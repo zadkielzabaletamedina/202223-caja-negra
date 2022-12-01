@@ -45,4 +45,16 @@ class SearchTest {
 		Node resultado = arbolVariosNiveles.search("7");
 		assertEquals(resultado,null);
 	}
+	
+	@Test 
+	void arbolUnNivelContenidoInvalido() {
+	    	Node resultado = arbolUnNodo.search(contenidoNoValido);
+	    	assertEquals(resultado,null);
+	}
+	
+	@Test 
+	void arbolVariosNivelesContenidoInvalido() {
+	    	Node resultado = arbolVariosNiveles.search(contenidoNoValido);
+	    	assertEquals(resultado,null);
+	}
 }
