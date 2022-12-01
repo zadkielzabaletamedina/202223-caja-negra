@@ -23,8 +23,8 @@ public class EqualsTest {
 	    	arbolSoloRaiz = Util.crearArbolSoloRaiz();
 	    	arbolSoloRaiz1 = Util.crearArbolSoloRaiz();
 	    	
-		arbolVariosNiveles = Util.crearArbolVariosNiveles();
-		arbolVariosNiveles1 = Util.crearArbolVariosNiveles();
+		arbolVariosNiveles = Util.crearArbolTresNiveles();
+		arbolVariosNiveles1 = Util.crearArbolTresNiveles();
 		
 		arbolNulo= null;
 	}

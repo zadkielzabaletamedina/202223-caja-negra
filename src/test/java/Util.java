@@ -56,7 +56,7 @@ public class Util {
 	return arbolDosHijos;
     }
     
-    public static BinaryTree crearArbolVariosNiveles() {
+    public static BinaryTree crearArbolTresNiveles() {
 	BinaryTree arbolVariosNiveles;
 	Node aux;
 	Node aux2;
@@ -73,7 +73,7 @@ public class Util {
 	return arbolVariosNiveles;
     }
     
-    public static BinaryTree crearArbolVariosNivelesIzq() {
+    public static BinaryTree crearArbolCuatroNivelesIzq() {
     	BinaryTree arbolVariosNiveles;
     	Node aux;
     	Node aux2;
@@ -111,11 +111,9 @@ public class Util {
     	aux = new Node("3");
     	aux.setParent(arbolVariosNiveles.getRoot());
     	arbolVariosNiveles.getRoot().setRightChild(aux);
-    	
     	aux3= new Node("5");
     	aux3.setParent(aux2);
     	arbolVariosNiveles.getRoot().getLeftChild().getLeftChild().setRightChild(aux3);
-    	
     	return arbolVariosNiveles;
       }
     

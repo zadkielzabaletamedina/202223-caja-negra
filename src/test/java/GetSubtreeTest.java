@@ -24,7 +24,7 @@ public class GetSubtreeTest {
 	    arbolSoloRaiz = Util.crearArbolSoloRaiz();
 		raizArbolSoloRaiz = arbolSoloRaiz.getRoot();
 
-		arbolVariosNiveles = Util.crearArbolVariosNiveles();
+		arbolVariosNiveles = Util.crearArbolTresNiveles();
 		nodoArbolVariosNiveles = arbolVariosNiveles.getRoot().getLeftChild();
 		subArbolVariosNiveles= new BinaryTree<String>("2");
 		Node aux = new Node("4"); 

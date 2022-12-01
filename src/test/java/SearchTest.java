@@ -17,7 +17,7 @@ class SearchTest {
 	@BeforeEach
 	void setUp() {
 	    	arbolUnNodo = Util.crearArbolSoloRaiz();
-	    	arbolVariosNiveles = Util.crearArbolVariosNiveles();
+	    	arbolVariosNiveles = Util.crearArbolTresNiveles();
 		contenidoValido = "1";
 		contenidoNoValido = "abc_";
 	}

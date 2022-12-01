@@ -16,7 +16,7 @@ class RemoveTest {
 	@BeforeEach
 	void setUp() {
 		arbolSoloRaiz  = Util.crearArbolSoloRaiz();
-		arbolVariosNiveles = Util.crearArbolVariosNiveles();
+		arbolVariosNiveles = Util.crearArbolTresNiveles();
 		arbolVariosNiveles1 = Util.crearArbolSoloHijoIzquierda();
 
 		nodoNoEnElArbol= new Node("6");

@@ -42,7 +42,7 @@ public class ToListTest {
 		listaArbolDosHijos.add("2");
 		listaArbolDosHijos.add("3");
 
-		arbolVariosNiveles = Util.crearArbolVariosNiveles();
+		arbolVariosNiveles = Util.crearArbolTresNiveles();
 		listaArbolVariosNiveles= new ArrayList<String>() ;
 		listaArbolVariosNiveles.add("1");
 		listaArbolVariosNiveles.add("2");

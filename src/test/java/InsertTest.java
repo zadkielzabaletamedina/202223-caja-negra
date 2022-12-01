@@ -40,12 +40,12 @@ public class InsertTest {
 	    arbolSoloRaizHijoDcha= Util.crearArbolSoloHijoDerecha();
 	    
 
-		arbolVariosNiveles = Util.crearArbolVariosNiveles();
+		arbolVariosNiveles = Util.crearArbolTresNiveles();
 		nodoArbolVariosNiveles=arbolVariosNiveles.getRoot().getLeftChild().getLeftChild();
 		nodoArbolVariosNivelesConHijoIzq= arbolVariosNiveles.getRoot().getLeftChild();
 
 				
-		arbolVariosNivelesHijoIzq= Util.crearArbolVariosNivelesIzq();
+		arbolVariosNivelesHijoIzq= Util.crearArbolCuatroNivelesIzq();
 		
 		
 		arbolVariosNivelesHijoDcha= Util.crearArbolVariosNivelesDcha();

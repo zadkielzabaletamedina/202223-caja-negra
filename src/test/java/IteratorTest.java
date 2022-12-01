@@ -21,7 +21,7 @@ class IteratorTest {
 	arbolUnSoloNodo = Util.crearArbolSoloRaiz();
 	arbolUnSoloHijo = Util.crearArbolSoloHijoIzquierda();
 	arbolDosHijos = Util.crearArbolDosHijos();
-	arbolVariosNiveles = Util.crearArbolVariosNiveles();
+	arbolVariosNiveles = Util.crearArbolTresNiveles();
     }
 
     @Test

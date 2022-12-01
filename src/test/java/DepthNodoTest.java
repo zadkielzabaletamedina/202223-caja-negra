@@ -33,7 +33,7 @@ public class DepthNodoTest {
 		arbolDosHijos = Util.crearArbolDosHijos();
 		raizArbolDosHijos = arbolDosHijos.getRoot();
 		
-		arbolVariosNiveles = Util.crearArbolVariosNiveles();
+		arbolVariosNiveles = Util.crearArbolTresNiveles();
 		raizVariosNiveles= arbolVariosNiveles.getRoot();
 		
 		nodoNoEnArbol=new Node<String>("6");

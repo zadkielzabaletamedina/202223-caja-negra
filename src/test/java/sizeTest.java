@@ -19,7 +19,7 @@ class sizeTest {
 	    	arbolSoloRaiz = Util.crearArbolSoloRaiz();
 		arbolSoloUnHijo = Util.crearArbolSoloHijoIzquierda();
 		arbolDosHijos = Util.crearArbolDosHijos();
-		arbolVariosNiveles = Util.crearArbolVariosNiveles();	
+		arbolVariosNiveles = Util.crearArbolTresNiveles();	
 	}
 	@Test
 	void soloNodoRaiz() {

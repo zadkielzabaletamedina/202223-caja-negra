@@ -20,7 +20,7 @@ public class DepthTest {
 	    	arbolSoloRaiz = Util.crearArbolSoloRaiz();
 		arbolSoloUnHijo = Util.crearArbolSoloHijoIzquierda();
 		arbolDosHijos = Util.crearArbolDosHijos();
-		arbolVariosNiveles = Util.crearArbolVariosNiveles();
+		arbolVariosNiveles = Util.crearArbolTresNiveles();
 	}
 	
 	@Test

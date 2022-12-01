@@ -29,7 +29,7 @@ public class toStringTest {
 	    	arbolSoloRaiz = Util.crearArbolSoloRaiz();
 		arbolSoloUnHijo = Util.crearArbolSoloHijoIzquierda();
 		arbolDosHijos = Util.crearArbolDosHijos();
-		arbolVariosNiveles = Util.crearArbolVariosNiveles();
+		arbolVariosNiveles = Util.crearArbolTresNiveles();
 		
 		stringArbolSoloRaiz = "1";
 		stringArbolSoloUnHijo = "1 2";
