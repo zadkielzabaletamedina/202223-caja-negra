@@ -23,8 +23,6 @@ public class InsertTest {
 	private Node nodoArbolVariosNivelesConHijoDcha;
 	
 	private Node nodoNoEnElArbol;
-	private Node nodoNoEnElArbolHijoIzq;
-	private Node nodoNoEnElArbolHijoDcha;
 
 	
 
@@ -49,90 +47,117 @@ public class InsertTest {
 		
 		
 		arbolVariosNivelesHijoDcha= Util.crearArbolVariosNivelesDcha();
-		nodoArbolVariosNivelesConHijoIzq= arbolVariosNivelesHijoIzq.getRoot().getLeftChild().getLeftChild();
+		nodoArbolVariosNivelesConHijoDcha= arbolVariosNivelesHijoDcha.getRoot().getLeftChild().getLeftChild();
 
 
 		
 		nodoNoEnElArbol= new Node("6");
 		
-		nodoNoEnElArbolHijoIzq= new Node("7");
-		nodoNoEnElArbolHijoIzq.setLeftChild(new Node("8"));
-		
-		nodoNoEnElArbolHijoDcha= new Node("7");
-		nodoNoEnElArbolHijoIzq.setLeftChild(new Node("8"));
-		
-		
+
 	}
-	
-	//content válido, nodo no ,tiene hijo ,true ,varios
-	@Test
-	void arbolVariosNivelesNodoNoExisteConHijoIzquierda() {
-		assertThrows(Exception.class, ()-> arbolVariosNiveles.insert("5",nodoNoEnElArbolHijoIzq , true));
-	}
-	//content válido, nodo no, tiene hijo, false, varios 
+	//Content v, nodo no, true, un nodo
 	@Test 
-	void arbolVariosNivelesNodoNoExisteConHijoDerecha() {
-		assertThrows(Exception.class, ()-> arbolVariosNiveles.insert("5",nodoNoEnElArbolHijoDcha , false));
-	}
-	//content válido, nodo no, no hijo, true, un nivel
-	@Test 
-	void arbolSoloRaizNodoNoExisteIzquierda() {
+	void arbolSoloRaizNodoNoIzquierda() {
 		assertThrows(Exception.class, ()-> arbolSoloRaiz.insert("5", nodoNoEnElArbol, true));
 	}
-	//content válido, nodo no, no hijo, true, varios
-	@Test 
-	void arbolVariosNivelesNodoNoExisteIzquierda() {
-		assertThrows(Exception.class, ()-> arbolVariosNiveles.insert("5",nodoNoEnElArbol , true));
+	//Content v, nodo no, true, varios
+	@Test
+	void arbolVariosNodoNoIzquierda() {
+		assertThrows(Exception.class, ()-> arbolVariosNiveles.insert("5", nodoNoEnElArbol, true));
 	}
-	//content válido, nodo no, no hijo, false, un nivel
-	@Test 
-	void arbolSoloRaizNodoNoExisteDerecha() {
+	//Content v, nodo no, false, un nodo
+	@Test
+	void arbolSoloRaizNodoNoDerecha() {
 		assertThrows(Exception.class, ()-> arbolSoloRaiz.insert("5", nodoNoEnElArbol, false));
 	}
-	//content válido, nodo no, hijo no, false, varios
-	@Test 
-	void arbolVariosNivelesNodoNoExisteDerecha() {
-		assertThrows(Exception.class, ()-> arbolVariosNiveles.insert("5",nodoNoEnElArbol , false));
-	}
-	//content válido, nodo si, con hijo donde se quiere, true, varios
-	@Test 
-	void arbolVariosNivelesConHijoEnLaIzquierda() {
-		assertThrows(Exception.class, ()->arbolVariosNiveles.insert("5",nodoArbolVariosNivelesConHijoIzq, true));
-	}
-	//content válido, nodo si, tiene hijo, false, varios
-	@Test 
-	void arbolVariosNivelesConHijoEnLaDerecha() {
-		assertThrows(Exception.class, ()->arbolVariosNivelesHijoDcha.insert("5",nodoArbolVariosNivelesConHijoDcha, false));
-	}
-	//content válido, nodo si, no hijo,true, solo raiz
+	//Content v, nodo no, false, varios
 	@Test
-	void arbolSoloRaizEnLaIzquierda() {
+	void arbolVariosNodoNoDerecha() {
+		assertThrows(Exception.class, ()-> arbolVariosNiveles.insert("5", nodoNoEnElArbol, false));
+	}
+	//Content v, nodo existe pero con hijo, true, varios
+	@Test
+	void arbolVariosConNodoPeroHijoIzquierda() {
+		assertThrows(Exception.class, ()-> arbolVariosNiveles.insert("5", nodoArbolVariosNivelesConHijoIzq, true));
+	}
+	//Content v, nodo existe pero con hijo, false, varios
+	@Test
+	void arbolVariosConNodoPeroHijoDerecha() {
+		assertThrows(Exception.class, ()-> arbolVariosNivelesHijoDcha.insert("5", nodoArbolVariosNivelesConHijoDcha, false));
+	}
+	//Content v, nodo si, true, un nodo
+	@Test
+	void arbolRaizConNodoIzquierda() {
 		arbolSoloRaiz.insert("2", raizArbolSoloRaiz, true);
-		assertTrue(Util.arbolesIguales(arbolSoloRaiz, arbolSoloRaizHijoIzq));
+		assertTrue(Util.arbolesIguales(arbolSoloRaizHijoIzq, arbolSoloRaiz));
+	}
+	//Content v, nodo si, true, varios
+	@Test
+	void arbolVariosConNodoIzquierda() {
+		arbolVariosNiveles.insert("5", nodoArbolVariosNiveles, true);
+		assertTrue(Util.arbolesIguales(arbolVariosNivelesHijoIzq, arbolVariosNiveles));
+	}
+	//Content v, nodo si, false, un nodo
+	@Test
+	void arbolRaizConNodoDerecha() {
+		arbolSoloRaiz.insert("2", raizArbolSoloRaiz, false);
+		assertTrue(Util.arbolesIguales(arbolSoloRaizHijoDcha, arbolSoloRaiz));
+	}
+	//Content v, nodo si, false, varios
+	@Test
+	void arbolVariosConNodoDerecha() {
+		arbolVariosNiveles.insert("5", nodoArbolVariosNiveles, false);
+		assertTrue(Util.arbolesIguales(arbolVariosNivelesHijoDcha, arbolVariosNiveles));
+	}
+	//content in, nodo no, true, uno
+	void arbolRaizNodoNoIzquierdaContentNo() {
+		assertThrows(Exception.class, ()-> arbolSoloRaiz.insert("*", nodoNoEnElArbol, true));
+	}
+	//Content in, nodo no, true, varios
+	@Test
+	void arbolVariosNodoNoIzquierdaContentNo() {
+		assertThrows(Exception.class, ()-> arbolVariosNiveles.insert("*", nodoNoEnElArbol, true));
+	}
+	//Content in, nodo no, false, un nodo 
+	@Test	void arbolSoloRaizNodoNoDerechaContentNo() {
+		assertThrows(Exception.class, ()-> arbolSoloRaiz.insert("*", nodoNoEnElArbol, false));
+	}
+	//Content in, nodo no, false, varios
+	@Test
+	void arbolVariosNodoNoDerechaContentNo() {
+		assertThrows(Exception.class, ()-> arbolVariosNiveles.insert("*", nodoNoEnElArbol, false));
+	}
+	//Content in, nodo existe pero con hijo, true, varios
+	@Test
+	void arbolVariosConNodoPeroHijoIzquierdaContentNo() {
+		assertThrows(Exception.class, ()-> arbolVariosNiveles.insert("*", nodoArbolVariosNivelesConHijoIzq, true));
+	}
+	//Content in, nodo existe pero con hijo, false, varios
+	@Test
+	void arbolVariosConNodoPeroHijoDerechaContentNo() {
+		assertThrows(Exception.class, ()-> arbolVariosNivelesHijoDcha.insert("*", nodoArbolVariosNivelesConHijoDcha, false));
+	}
+	//Content in, nodo si, true, un nodo
+	@Test
+	void arbolRaizConNodoIzquierdaContentNo() {
+		assertThrows(Exception.class, ()-> arbolSoloRaiz.insert("*", raizArbolSoloRaiz, true));
+	}
+	//Content in, nodo si, true, varios
+	@Test
+	void arbolVariosConNodoIzquierdaContentNo() {
+		assertThrows(Exception.class, ()-> arbolVariosNiveles.insert("*", nodoArbolVariosNiveles, true));
+	}
+	//Content in, nodo si, false, un nodo
+	@Test
+	void arbolRaizConNodoDerechaContentNo() {
+		assertThrows(Exception.class, ()-> arbolSoloRaiz.insert("*", raizArbolSoloRaiz, false));
+	}
+	//Content in, nodo si, false, varios
+	@Test
+	void arbolVariosConNodoDerechaContentNo() {
+		assertThrows(Exception.class, ()-> arbolVariosNiveles.insert("*", nodoArbolVariosNiveles, false));
+		
 	}
 	
-	//contenido válido, nodo en el árbol, no tiene hijo, atleft = true, arbol con varios niveles
-	//contenido válido, nodo en el árbol, no tiene hijo, atleft = false, arbol con varios niveles
-	void arbolVariosNivelesValidoEnElArbolIzq() {
-		arbolVariosNiveles.insert("5",nodoArbolVariosNiveles, true );
-		assertTrue(Util.arbolesIguales(arbolVariosNiveles,arbolVariosNivelesHijoIzq));
-	} 
-	@Test
-	//contenido válido, nodo en el árbol, no tiene hijo, atleft = false, arbol solo raiz
-		void arbolSoloRaizValidoEnElArbolDcha() {
-			arbolSoloRaiz.insert("2",raizArbolSoloRaiz, false );
-			assertTrue(Util.arbolesIguales(arbolSoloRaiz,arbolSoloRaizHijoIzq));
-		}
-	@Test
-		//contenido válido, nodo en el árbol, no tiene hijo, atleft = false, arbol con varios niveles
-		void arbolVariosNivelesValidoEnElArbolDcha() {
-			arbolVariosNiveles.insert("5",nodoArbolVariosNiveles, false );
-			assertTrue(Util.arbolesIguales(arbolVariosNiveles,arbolVariosNivelesHijoDcha));
-		}
-	@Test
-		//contenido no válido, nodo no en el árbol, tiene hijo, atleft = true, arbol varios niveles
-				void arbolVariosNivelesNoValidoNoEnElArbolIzq() {
-			assertThrows(Exception.class, ()-> arbolVariosNiveles.insert("/", nodoNoEnElArbol, true));
-		}
 	
 }
